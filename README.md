@@ -43,24 +43,8 @@ Skill effects only apply to your own casts. Another player's float near fish you
 - [Jotunn, the Valheim Library](https://www.nexusmods.com/valheim/mods/1138)
 - Configuration Manager (optional). You can also edit `BepInEx/config/com.darkendvoid.fishbetter.cfg` by hand.
 
-## Development
+## Building
 
-### Setup (Linux)
-
-1. Install the .NET SDK (`sudo apt install dotnet-sdk-10.0`). The plugin targets `net462`.
-2. Copy `Environment.props.example` to `Environment.props` and adjust the paths.
-3. Register the mod with Amethyst Mod Manager once: `scripts/register-mod.sh`.
-
-### Dev loop
-
-The Amethyst GUI must be closed while scripts deploy, because it locks the mod library.
-
-| Script | Purpose |
-|---|---|
-| `scripts/deploy.sh [--no-build] [Debug\|Release]` | Build, rescan the Amethyst library, deploy |
-| `scripts/launch.sh` / `scripts/stop.sh` | Start or stop Valheim through Steam (Proton) |
-| `scripts/smoketest.sh [timeout] [--keep-running]` | Launch the game, wait for `SMOKE_MARKERS` (in `scripts/env.sh`) in the log, stop the game |
-| `scripts/log.sh [all\|mod\|errors\|plugins]` | Follow or filter `BepInEx/LogOutput.log` |
-| `scripts/bump-version.sh <x.y.z>` | Set the version in the csproj and plugin, and date the CHANGELOG `## Unreleased` section |
-
-This mod is private, so it has no Nexus upload script.
+1. Install the .NET SDK. The plugin targets `net462`.
+2. Copy `Environment.props.example` to `Environment.props` and set `VALHEIM_INSTALL` to your Valheim folder, with BepInEx and Jötunn installed.
+3. Run `dotnet build src/FishBetter/FishBetter.csproj -c Release`. The plugin is written to `src/FishBetter/bin/Release/FishBetter.dll`.
