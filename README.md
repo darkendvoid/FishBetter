@@ -17,7 +17,7 @@ Everything below scales linearly with your Fishing skill (0 at level 0, the full
 - **Bait tiers**: every bait belongs to a biome tier (Meadows 1, Black Forest 2, Swamp 3, Mountain/Ocean 4, Plains 5, Mistlands 6, Ashlands 7, Deep North 8). A fish's tier is the highest tier among the baits it takes in vanilla. Fish never bite bait from a lower tier than their own. They bite any bait of their tier or higher. Vanilla fish always bite their own bait, so each tier above theirs instead adds +10% to how often fish swim to your float and +5% to the chance of a bonus star.
 - **Bite and hook**: fish swim to your float more often (50% → 80%) and bite more often (+30%, capped at 95%). Vanilla fish already bite their own bait every time, so the bite bonus only matters for modded fish.
 - **Fighting the fish**: escape thrashing lasts 60% less, calm gaps between escapes last twice as long, and the line stretches 75% further before it snaps.
-- **Reeling**: max-skill reel speed is 3 m/s (vanilla 2). Reeling stamina drops to 0.1× (vanilla 0.2×), and the drain while a fish is hooked to 0.05/s (vanilla 0.2).
+- **Reeling**: max-skill reel speed is 3 m/s (vanilla 2). Reeling stamina drops to 0.15× (vanilla 0.2×), and the drain while a fish is hooked to 0.1/s (vanilla 0.2).
 - **Auto-catch**: a hooked fish reeled within 2.5 m of you is caught straight into your inventory.
 - **Catch rewards**: 30% chance of a bonus fish of the same kind and stars, 25% chance of +1 star, and 40% chance to keep your bait.
 - **XP on catch**: 10 Fishing XP × fish quality for every catch, on top of vanilla's reeling XP.

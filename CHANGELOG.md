@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1
+
+- Reeling in a fish costs a bit more stamina at high skill (reel cost 0.15×, was 0.1×; hooked drain 0.1/s, was 0.05/s).
+
 ## 0.2.0
 
 - Biome bait recipes use a common trophy from each bait's own biome and make 100 bait from 100 regular bait + 1 trophy.

@@ -92,10 +92,10 @@ namespace FishBetter
             ReelSpeedAtMax = config.Bind(Reel, "ReelSpeedAtMax", 3f,
                 new ConfigDescription("Reel speed at skill 100 in m/s (vanilla 2, skill 0 is 1).",
                     new AcceptableValueRange<float>(1f, 10f), new ConfigurationManagerAttributes { Order = 3 }));
-            ReelStaminaAtMax = config.Bind(Reel, "ReelStaminaAtMax", 0.1f,
+            ReelStaminaAtMax = config.Bind(Reel, "ReelStaminaAtMax", 0.15f,
                 new ConfigDescription("Reeling stamina cost multiplier at skill 100 (vanilla 0.2).",
                     new AcceptableValueRange<float>(0f, 1f), new ConfigurationManagerAttributes { Order = 2 }));
-            HookedStaminaAtMax = config.Bind(Reel, "HookedStaminaAtMax", 0.05f,
+            HookedStaminaAtMax = config.Bind(Reel, "HookedStaminaAtMax", 0.1f,
                 new ConfigDescription("Stamina per second drained while a fish is on the line at skill 100 (vanilla 0.2, skill 0 is 1).",
                     new AcceptableValueRange<float>(0f, 1f), new ConfigurationManagerAttributes { Order = 1 }));
 
