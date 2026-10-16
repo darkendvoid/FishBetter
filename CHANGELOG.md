@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.2.2
 
 - Frosty bait (Deep North) is made with an Elaking trophy instead of a Drake hatchling trophy.
 

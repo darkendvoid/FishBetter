@@ -13,7 +13,7 @@ namespace FishBetter
     {
         public const string ModGuid = "com.darkendvoid.fishbetter";
         public const string ModName = "FishBetter";
-        public const string ModVersion = "0.2.1";
+        public const string ModVersion = "0.2.2";
 
         internal static ManualLogSource Log;
 

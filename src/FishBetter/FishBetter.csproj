@@ -4,7 +4,7 @@
     <TargetFramework>net462</TargetFramework>
     <AssemblyName>FishBetter</AssemblyName>
     <RootNamespace>FishBetter</RootNamespace>
-    <Version>0.2.1</Version>
+    <Version>0.2.2</Version>
     <LangVersion>latest</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DebugType>portable</DebugType>
