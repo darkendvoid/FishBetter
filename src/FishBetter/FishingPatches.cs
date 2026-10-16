@@ -32,6 +32,16 @@ namespace FishBetter
             BaitTiers.LogTable(__instance.m_items);
         }
 
+        // The menu copy (CopyOtherDB) and the in-world ObjectDB (Awake) share the same recipe
+        // assets; Apply is idempotent and skips the still-empty menu DB at Awake.
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(ObjectDB), nameof(ObjectDB.CopyOtherDB))]
+        private static void ReworkMenuRecipes(ObjectDB __instance) => BaitRecipes.Apply(__instance);
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(ObjectDB), nameof(ObjectDB.Awake))]
+        private static void ReworkWorldRecipes(ObjectDB __instance) => BaitRecipes.Apply(__instance);
+
         // --- Bite and hook -------------------------------------------------------------------
 
         // Vanilla rolls m_baseHookChance (50%) per float to decide whether a fish swims to it.

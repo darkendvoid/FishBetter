@@ -16,4 +16,5 @@ SMOKE_MARKERS=(
   "$MOD_NAME [0-9.]+ loaded"
   "Fishing patches applied"
   "Fish tiers \\([1-9][0-9]* fish\\)"
+  "Bait recipes reworked \\([1-9]"
 )

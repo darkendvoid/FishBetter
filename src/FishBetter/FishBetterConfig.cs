@@ -10,6 +10,7 @@ namespace FishBetter
         private const string Fight = "4 - Fighting the fish";
         private const string Reel = "5 - Reeling";
         private const string Rewards = "6 - Catch rewards";
+        private const string Recipes = "7 - Bait recipes";
 
         public static ConfigEntry<bool> Enabled;
 
@@ -36,6 +37,11 @@ namespace FishBetter
         public static ConfigEntry<float> StarUpChanceAtMax;
         public static ConfigEntry<float> KeepBaitChanceAtMax;
         public static ConfigEntry<float> CatchXp;
+
+        public static ConfigEntry<bool> RecipesEnabled;
+        public static ConfigEntry<string> BaitTrophies;
+        public static ConfigEntry<int> RegularBaitCost;
+        public static ConfigEntry<int> BaitPerCraft;
 
         public static void Bind(ConfigFile config)
         {
@@ -105,6 +111,20 @@ namespace FishBetter
             CatchXp = config.Bind(Rewards, "CatchXp", 10f,
                 new ConfigDescription("Fishing XP for landing a fish, times its quality (1 = no stars). Vanilla only gives about 1 per second of reeling. 0 turns it off.",
                     new AcceptableValueRange<float>(0f, 100f), new ConfigurationManagerAttributes { Order = 1 }));
+
+            RecipesEnabled = config.Bind(Recipes, "Enabled", true,
+                new ConfigDescription("Rework the biome bait recipes at the prep table. Changes apply the next time you load a world.",
+                    null, new ConfigurationManagerAttributes { Order = 4 }));
+            BaitTrophies = config.Bind(Recipes, "BaitTrophies",
+                "FishingBaitForest:TrophyGreydwarf, FishingBaitSwamp:TrophyLeech, FishingBaitCave:TrophyWolf, FishingBaitOcean:TrophySerpent, FishingBaitPlains:TrophyDeathsquito, FishingBaitMistlands:TrophySeeker, FishingBaitAshlands:TrophyAsksvin, FishingBaitDeepNorth:TrophyHatchling",
+                new ConfigDescription("Bait prefab:trophy prefab pairs, comma separated. Bait not listed keeps its vanilla trophy.",
+                    null, new ConfigurationManagerAttributes { Order = 3 }));
+            RegularBaitCost = config.Bind(Recipes, "RegularBaitCost", 100,
+                new ConfigDescription("Regular fishing bait used per craft (vanilla 20).",
+                    new AcceptableValueRange<int>(1, 1000), new ConfigurationManagerAttributes { Order = 2 }));
+            BaitPerCraft = config.Bind(Recipes, "BaitPerCraft", 100,
+                new ConfigDescription("Biome bait made per craft from one trophy (vanilla 20).",
+                    new AcceptableValueRange<int>(1, 1000), new ConfigurationManagerAttributes { Order = 1 }));
         }
 
         // Read by name via reflection by Configuration Manager; only the fields used here are declared.
