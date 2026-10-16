@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Frosty bait (Deep North) is made with an Elaking trophy instead of a Drake hatchling trophy.
+
 ## 0.2.1
 
 - Reeling in a fish costs a bit more stamina at high skill (reel cost 0.15×, was 0.1×; hooked drain 0.1/s, was 0.05/s).

@@ -116,7 +116,7 @@ namespace FishBetter
                 new ConfigDescription("Rework the biome bait recipes at the prep table. Changes apply the next time you load a world.",
                     null, new ConfigurationManagerAttributes { Order = 4 }));
             BaitTrophies = config.Bind(Recipes, "BaitTrophies",
-                "FishingBaitForest:TrophyGreydwarf, FishingBaitSwamp:TrophyLeech, FishingBaitCave:TrophyWolf, FishingBaitOcean:TrophySerpent, FishingBaitPlains:TrophyDeathsquito, FishingBaitMistlands:TrophySeeker, FishingBaitAshlands:TrophyAsksvin, FishingBaitDeepNorth:TrophyHatchling",
+                "FishingBaitForest:TrophyGreydwarf, FishingBaitSwamp:TrophyLeech, FishingBaitCave:TrophyWolf, FishingBaitOcean:TrophySerpent, FishingBaitPlains:TrophyDeathsquito, FishingBaitMistlands:TrophySeeker, FishingBaitAshlands:TrophyAsksvin, FishingBaitDeepNorth:TrophyElaking",
                 new ConfigDescription("Bait prefab:trophy prefab pairs, comma separated. Bait not listed keeps its vanilla trophy.",
                     null, new ConfigurationManagerAttributes { Order = 3 }));
             RegularBaitCost = config.Bind(Recipes, "RegularBaitCost", 100,

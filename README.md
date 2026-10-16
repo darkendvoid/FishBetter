@@ -21,7 +21,7 @@ Everything below scales linearly with your Fishing skill (0 at level 0, the full
 - **Auto-catch**: a hooked fish reeled within 2.5 m of you is caught straight into your inventory.
 - **Catch rewards**: 30% chance of a bonus fish of the same kind and stars, 25% chance of +1 star, and 40% chance to keep your bait.
 - **XP on catch**: 10 Fishing XP × fish quality for every catch, on top of vanilla's reeling XP.
-- **Bait recipes**: each biome bait at the prep table costs 100 regular bait + 1 trophy and makes 100 bait (vanilla 20 + 1 → 20). The trophies now come from common mobs of each bait's own biome: Greydwarf (Mossy), Leech (Sticky), Wolf (Cold), Serpent (Heavy), Deathsquito (Stingy), Seeker (Misty), Asksvin (Hot) and Drake hatchling (Frosty; Deep North has no mobs yet).
+- **Bait recipes**: each biome bait at the prep table costs 100 regular bait + 1 trophy and makes 100 bait (vanilla 20 + 1 → 20). The trophies now come from common mobs of each bait's own biome: Greydwarf (Mossy), Leech (Sticky), Wolf (Cold), Serpent (Heavy), Deathsquito (Stingy), Seeker (Misty), Asksvin (Hot) and Elaking (Frosty).
 
 The mod logs a table of every fish, its tier and its baits at startup (`Fish tiers (...)` in `BepInEx/LogOutput.log`).
 
